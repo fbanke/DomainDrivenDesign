@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainDrivenDesign", "DomainDrivenDesign\DomainDrivenDesign.csproj", "{BA66628C-306A-43FB-85FB-69326EB04FD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{BA66628C-306A-43FB-85FB-69326EB04FD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DB159FF6-DC54-4519-9C1B-63043CAAEB3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Forecasting", "Domain.Forecasting\Domain.Forecasting.csproj", "{1A788041-6F53-4692-9866-FC71315F8FCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Warehouse", "Domain.Warehouse\Domain.Warehouse.csproj", "{1A788041-6F53-4692-9866-FC71315F8FCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.WeatherStation", "Domain.WeatherStation\Domain.WeatherStation.csproj", "{DD3228F4-3F48-4952-981D-BA9E92CF7DB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Catalog", "Domain.Catalog\Domain.Catalog.csproj", "{DD3228F4-3F48-4952-981D-BA9E92CF7DB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Shared.Weather", "Domain.Shared.Weather\Domain.Shared.Weather.csproj", "{B282EC74-5105-4858-AA39-03E3843B298F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Shared", "Domain.Shared\Domain.Shared.csproj", "{B282EC74-5105-4858-AA39-03E3843B298F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

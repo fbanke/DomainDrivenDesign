@@ -4,4 +4,15 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MassTransit.AspNetCore" Version="7.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain.Catalog\Domain.Catalog.csproj" />
+      <ProjectReference Include="..\Domain.Shared.Events\Domain.Shared.Events.csproj" />
+      <ProjectReference Include="..\Domain.Shared\Domain.Shared.csproj" />
+      <ProjectReference Include="..\Domain.Warehouse\Domain.Warehouse.csproj" />
+    </ItemGroup>
+
 </Project>
