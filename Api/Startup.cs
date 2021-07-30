@@ -1,15 +1,12 @@
 using Domain.Catalog;
 using Domain.Warehouse;
 using Infrastructure;
-using Infrastructure.Warehouse;
-using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using IProductRepository = Domain.Warehouse.IProductRepository;
 
 namespace Api
 {
@@ -34,12 +31,11 @@ namespace Api
             
             services.AddSingleton<CatalogService>();
             services.AddSingleton<InventoryService>();
-            services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<Domain.Warehouse.IProductRepository, Infrastructure.Warehouse.ProductRepository>();
             services.AddSingleton<Domain.Catalog.IProductRepository, Infrastructure.Catalog.ProductRepository>();
             services.AddSingleton<DomainEventService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DomainEventService domainEventService, Domain.Catalog.IProductRepository productRepository)
         {
             domainEventService.AddHandler(new InventoryLevelChangedEventHandler(productRepository));

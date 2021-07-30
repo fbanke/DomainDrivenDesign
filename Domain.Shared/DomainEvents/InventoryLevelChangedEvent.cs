@@ -1,6 +1,6 @@
 ﻿namespace Domain.Shared.DomainEvents
 {
-    public class InventoryLevelChangedEvent : INotification
+    public class InventoryLevelChangedEvent : IDomainEvent
     {
         private readonly Sku _sku;
         private readonly int _inventoryLevel;

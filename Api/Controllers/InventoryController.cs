@@ -2,7 +2,6 @@
 using Domain.Shared;
 using Domain.Warehouse;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Api.Controllers
 {
@@ -10,15 +9,13 @@ namespace Api.Controllers
     [Route("[controller]")]
     public class InventoryController : ControllerBase
     {
-        private readonly ILogger<InventoryController> _logger;
         private readonly InventoryService _inventoryService;
         private readonly IMapper _mapper;
 
-        public InventoryController(InventoryService inventoryService, IMapper mapper, ILogger<InventoryController> logger)
+        public InventoryController(InventoryService inventoryService, IMapper mapper)
         {
             _inventoryService = inventoryService;
             _mapper = mapper;
-            _logger = logger;
         }
 
         [HttpGet]

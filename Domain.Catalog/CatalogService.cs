@@ -4,7 +4,7 @@ namespace Domain.Catalog
 {
     public class CatalogService
     {
-        private IProductRepository _productRepository;
+        private readonly IProductRepository _productRepository;
 
         public CatalogService(IProductRepository productRepository)
         {

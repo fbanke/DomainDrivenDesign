@@ -2,7 +2,6 @@
 using Domain.Shared;
 using Domain.Catalog;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Api.Controllers
 {
@@ -12,13 +11,11 @@ namespace Api.Controllers
     {
         private readonly CatalogService _catalogService;
         private readonly IMapper _mapper;
-        private readonly ILogger<CatalogController> _logger;
 
-        public CatalogController(CatalogService catalogService, IMapper mapper, ILogger<CatalogController> logger)
+        public CatalogController(CatalogService catalogService, IMapper mapper)
         {
             _catalogService = catalogService;
             _mapper = mapper;
-            _logger = logger;
         }
 
         [HttpGet]

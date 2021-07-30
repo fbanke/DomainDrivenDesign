@@ -5,9 +5,9 @@ namespace Infrastructure
 {
     public class DomainEventService
     {
-        private readonly List<INotificationHandler<INotification>> _handlers = new();
+        private readonly List<IDomainEventHandler<IDomainEvent>> _handlers = new();
 
-        public void Publish(IEnumerable<INotification> domainEvents)
+        public void Publish(IEnumerable<IDomainEvent> domainEvents)
         {
             foreach (var domainEvent in domainEvents)
             {
@@ -18,7 +18,7 @@ namespace Infrastructure
             }
         }
 
-        public void AddHandler(INotificationHandler<INotification> handler)
+        public void AddHandler(IDomainEventHandler<IDomainEvent> handler)
         {
             _handlers.Add(handler);
         }

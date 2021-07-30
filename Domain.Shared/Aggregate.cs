@@ -1,19 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Domain.Shared.DomainEvents;
 
 namespace Domain.Shared
 {
     public class Aggregate
     {
-        private readonly List<INotification> _events = new List<INotification>();
+        private readonly List<IDomainEvent> _events = new();
 
-        protected void Push(INotification domainEvent)
+        protected void Push(IDomainEvent domainEvent)
         {
             _events.Add(domainEvent);
         }
 
-        public ReadOnlyCollection<INotification> GetDomainEvents()
+        public IEnumerable<IDomainEvent> GetDomainEvents()
         {
             return _events.AsReadOnly();
         }

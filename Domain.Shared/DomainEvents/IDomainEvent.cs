@@ -1,6 +1,6 @@
 ﻿namespace Domain.Shared.DomainEvents
 {
-    public interface INotification
+    public interface IDomainEvent
     {
         
     }

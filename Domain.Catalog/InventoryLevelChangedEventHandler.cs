@@ -2,7 +2,7 @@
 
 namespace Domain.Catalog
 {
-    public class InventoryLevelChangedEventHandler : INotificationHandler<InventoryLevelChangedEvent>, INotificationHandler<INotification>
+    public class InventoryLevelChangedEventHandler : IDomainEventHandler<InventoryLevelChangedEvent>, IDomainEventHandler<IDomainEvent>
     {
         private readonly IProductRepository _productRepository;
 
@@ -19,9 +19,9 @@ namespace Domain.Catalog
             _productRepository.Save(product);
         }
 
-        public void Handle(INotification notification)
+        public void Handle(IDomainEvent domainEvent)
         {
-            if (notification is InventoryLevelChangedEvent @event)
+            if (domainEvent is InventoryLevelChangedEvent @event)
             {
                 Handle(@event);
             }
