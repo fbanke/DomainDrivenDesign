@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Catalog", "Domain.Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Shared", "Domain.Shared\Domain.Shared.csproj", "{B282EC74-5105-4858-AA39-03E3843B298F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavior.Catalog.Test", "Behavior.Catalog.Test\Behavior.Catalog.Test.csproj", "{B03464EA-6A59-4C12-B062-108B2D784D77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{B282EC74-5105-4858-AA39-03E3843B298F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B282EC74-5105-4858-AA39-03E3843B298F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B282EC74-5105-4858-AA39-03E3843B298F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03464EA-6A59-4C12-B062-108B2D784D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03464EA-6A59-4C12-B062-108B2D784D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03464EA-6A59-4C12-B062-108B2D784D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03464EA-6A59-4C12-B062-108B2D784D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
