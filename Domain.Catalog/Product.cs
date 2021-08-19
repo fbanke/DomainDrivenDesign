@@ -1,4 +1,5 @@
-﻿using Domain.Shared;
+﻿using System;
+using Domain.Shared;
 
 namespace Domain.Catalog
 {
@@ -8,6 +9,9 @@ namespace Domain.Catalog
         public ProductName ProductName { get; }
         public Price Price { get; }
         public Visible Visible { get; }
+
+        public MediaId Media { get; }
+        public Uri MediaLink { get; private set; }
 
         public Product(Sku sku, ProductName productName, Visible visible, Price price)
         {
@@ -27,6 +31,11 @@ namespace Domain.Catalog
             {
                 Visible.InStock();
             }
+        }
+
+        public void MediaUriChanged(string uri)
+        {
+            MediaLink = new Uri(uri);
         }
     }
 }
